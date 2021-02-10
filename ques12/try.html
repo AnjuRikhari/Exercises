@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+<ul>
+            <li class="navbar"><a href="#">TO THE NEW</a></li> 
+            <li class="navbar-right"><a href="#">Quick Help</a></li>
+            <li class="navbar-right"><a href="#">Home</a></li>
+</ul>
+    <hr>
+
+<div class="center">
+    <div class="header">
+        <header><h2>Bug Report</h2></header>
+    </div>
+    <div class="form">
+        <form action="#">
+         <div id="d1">
+             <label for="title">Title:*</label>
+            <br>
+            <input type="text" id="title" class="textborder maxwidth" required>
+            <br><br>
+            <label for="title">Description:*</label>
+            <br>
+            <textarea name="message" rows="3" cols="30" class="textborder maxwidth" required></textarea>
+            <br><br>
+            <label for="os">Operating System:*</label>
+            <select id="os" name="oprsys" class="btncolor maxwidth textborder"  required>
+                <option value="WindowsXP" default>Windows XP</option>
+                <option value="Windows10">Windows 10</option>
+                <option value="mac">MAC OS</option>
+                <option value="linux">Linux</option>
+            </select>
+            <br><br>
+            <label for="prod">Product:*</label>
+            <select id="prod" name="product" class="btncolor maxwidth textborder"  required>
+                <option value="formoid" default>Formoid</option>
+                <option value="cloudhack">Cloud Hack</option>
+                <option value="Repofast">Repofast</option>
+                <option value="graphtl">GraphTL</option>
+            </select><br><br>
+            <label for="version">Version:*</label>
+            <input class="maxwidth textborder" type="text" required id="version" >
+            <br><br>
+            <label class="maxwidth">License:*</label><br>
+            <input type="radio" id="free" name="license" value="Free">
+            <label for="free">Free</label>
+            <input type="radio" id="business" name="license" value="Business">
+            <label for="business">Business</label><br><br>
+            <label for="sev">Severity:*</label>
+            <select id="sev" name="severity" class="btncolor maxwidth textborder">
+                <option value="critical" default>Critical</option>
+                <option value="moderate">Moderate</option>
+                <option value="low">Low</option>
+            </select><br><br>
+            <label for="attach">Attachments:*</label>
+            <br>
+            <label for="myfile"></label>
+            <input type="file" id="myfile" name="myfile" class="maxwidth textborder filetype"><br><br>
+            </div>
+    <div class="footer">
+        <footer>
+            <input type="submit" value="Send" id="s1" />
+        </footer>
+    </div>
+    </form>
+    </div>
+</div>
+
+</body>
+</html>
