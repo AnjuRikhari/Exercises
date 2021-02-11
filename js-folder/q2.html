@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script>
+           
+			var str = prompt('Enter the String : ');
+			var len = str.length;
+			var str1 = str.toLowerCase();
+			var flag=0;
+			for(var i=0;i<len/2;i++)
+				{
+					if(str1[i] != str1[len -1 -i])
+						{
+							flag=1;
+							break;
+						}
+				}
+			if(flag == 0)
+				console.log('String is palindrome');
+			else
+				console.log('Strng is not palindrome');
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

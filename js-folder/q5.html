@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <script>
+           var employees = [
+			   {
+				   name : "John",
+				   age : "30",
+				   salary : 900,
+				   dob : "18/02/1991"
+			   },
+			   {
+				   name : "Smith",
+				   age : "35",
+				   salary : 5500,
+				   dob : "25/05/1986"
+			   },
+			   {
+				   name : "Clark",
+				   age : "25",
+				   salary : 700,
+				   dob : "07/05/1996"
+			   },
+			   {
+				   name : "Stark",
+				   age : "17",
+				   salary : 5100,
+				   dob : "18/09/2004"
+			   },
+			   {
+				   name : "David",
+				   age : "25",
+				   salary : 900,
+				   dob : "18/02/1996"
+			   }
+		   ]
+		   console.log(employees)
+		   var r1 = employees.filter(employees => employees.salary > 5000);
+			console.log("Employees having greater than 5000 salary")
+			console.log(r1);
+			
+		    console.log("Employees whose age is less than equal to 30 : " )
+			var r3 = employees.filter(employees => employees.age <= 30);
+			console.log(r3)
+		
+					
+			
+			var r4 = employees.filter(employees => employees.salary < 1000 && employees.age > 20);
+			for(i in r4)
+				{
+					r4[i].salary = r4[i].salary * 5;
+				}
+			console.log("Increment in salary for those who have salary < 1000 and age >20")
+			console.log(r4);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
