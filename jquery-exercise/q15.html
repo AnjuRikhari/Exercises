@@ -1,0 +1,42 @@
+<html>
+    <head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<style>
+			div{
+				background-color: azure;
+				border-radius: 10px;
+				margin: 30px;
+				padding: 20px;
+				text-align: center;
+				font-size: 30px;
+			}
+			body{
+				background-color: gray;
+			}
+		</style>
+    </head>
+	<body>
+ <div class=container> 
+	 <button class="btn">Get Info!</button>
+	 <div>
+		 <p class="data">
+		 </p>
+	 </div>
+ </div> 
+ </body>
+<script>
+		$(document).ready(function(){
+			$(".btn").click(function(){
+							$.ajax({
+							url:"https://jsonplaceholder.typicode.com/todos/1",
+							dataType: "json",
+							success: function (result){
+								console.log(result);
+								$(".data").html(JSON.stringify(result));
+							}
+								
+							});
+							});
+		})
+</script>
+</html>

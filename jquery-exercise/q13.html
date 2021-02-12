@@ -1,0 +1,53 @@
+<html>
+    <head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<style>
+			div{
+				margin-bottom: 20px;
+			}
+			.container{
+				margin: 40px;
+				border-radius: 6px;
+				background-color: white;
+				padding: 30px;
+			}
+			body{
+				background-color: gray;
+			}
+			.div-ht{
+				border: 1px solid black;
+				border-radius: 5px;
+				padding: 9px;
+			}
+		</style>
+    </head>
+    <body>
+		<div class="container">
+			<div class="div-ht">
+				<p id="test">Hello World. This is the jquery code.</p>
+				<p class="test-new">Hello World. This is inside first div.</p>
+			</div>
+			<div class="div-ht">
+				<p>Hello World. This is the second div</p>
+			</div> 
+			<div class="div-ht">
+				<p class="test-new">Hello World. Have a great day.</p>
+				<p class="test-new">Hello World. Have a great day.</p>
+				<p class="test-new">Hello World. Have a great day.</p>
+				<p class="test-new">Hello World. Have a great day.</p>
+			</div>
+		</div>
+    </body>
+	<script>
+           var maxHeight = null;
+		   var h = 0;
+		   $(".div-ht").each(function(){
+			  var hi = $(this).height();
+			  if(hi>h){
+				  h = hi;
+				  maxHeight = $(this);
+			  }
+		   });
+		maxHeight.css("background-color","cyan").append('Max Height Element : '+h);
+        </script>
+</html>

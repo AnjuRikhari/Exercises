@@ -1,0 +1,33 @@
+<html>
+    <head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<style>
+			div{
+				margin-bottom: 20px;
+			}
+			.container{
+				margin: 40px;
+				border-radius: 6px;
+				background-color: white;
+				padding: 30px;
+			}
+			body{
+				background-color: gray;
+			}
+		</style>
+    </head>
+    <body>
+		<div class="container">
+		<h3>Hello world! Have a great day.</h3>
+		<h3>This is the second line of this div</h3>
+			<p><b>Click</b> on this line.</p>
+		</div>
+    </body>
+	<script>
+           $(document).ready(function(){
+			  $("p").bind("click",function(){
+				  $("p").append(" Next<b>Click</b>");
+			  });
+		   });
+        </script>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
+		<style>
+			div{
+				background-color: azure;
+				border-radius: 10px;
+				margin: 30px;
+				padding: 20px;
+				text-align: center;
+				font-size: 30px;
+			}
+			body{
+				background-color: gray;
+			}
+		</style>
+    </head>
+    <body>
+		<div class="container">
+			<a href="https://www.google.com/">Google</a>
+			<h5>.preventDefault() stops the default action of an element from happening. </h5>
+		</div> 
+    </body>
+	<script>
+           $("a").click(function(event){
+			   event.preventDefault();
+		   });
+        </script>
+</html>

@@ -1,0 +1,41 @@
+<html>
+    <head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<style>
+			div{
+				margin-bottom: 20px;
+			}
+			.container{
+				margin: 40px;
+				border-radius: 6px;
+				background-color: white;
+				padding: 30px;
+			}
+			body{
+				background-color: gray;
+			}
+			.first, #main, .form{
+				border: 1px solid black;
+				border-radius: 5px;
+				padding: 9px;
+			}
+		</style>
+    </head>
+    <body>
+		<div class="container">
+			<div class="first">
+				<p id="test">Hello World. This is the jquery code.</p>
+				<p class="test-new">Hello World. This is inside first div.</p>
+			</div>
+			<div id="main">
+				<p class="target">Hello World. This is the target class</p>
+			</div> 
+			
+		</div> 
+    </body>
+	<script>
+           $(document).ready(function(){
+			  $("#main").children(".target").css("font-size","30px");
+		   });
+        </script>
+</html>

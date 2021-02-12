@@ -1,0 +1,45 @@
+<html>
+    <head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<style>
+			div{
+				margin-bottom: 20px;
+			}
+			.container{
+				margin: 40px;
+				border-radius: 6px;
+				background-color: white;
+				padding: 30px;
+			}
+			body{
+				background-color: gray;
+			}
+			.first, .second-new, .form{
+				border: 1px solid black;
+				border-radius: 5px;
+				padding: 9px;
+			}
+		</style>
+    </head>
+    <body>
+		<div class="container">
+			<div class="first">
+				<p id="test">Hello World. This is the jquery code.</p>
+				<p class="test-new">Hello World. This is inside first div.</p>
+			</div>
+			<div class="second-new">
+				<p>Hello World. This is the second div</p>
+			</div> 
+			<div class="form">
+				Enter username: <input type="text" name="text1" id="user"><br>
+				Enter password: <input type="password" name="text2" id="pwd"><br><br>
+				<input type="submit" value="Submit" id="submit">
+			</div>
+		</div> 
+    </body>
+	<script>
+           $(document).ready(function(){
+			  $("#submit").attr("disabled",true);
+		   });
+        </script>
+</html>

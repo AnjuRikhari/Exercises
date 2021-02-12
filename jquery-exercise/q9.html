@@ -1,0 +1,38 @@
+<html>
+    <head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<style>
+			div{
+				background-color: azure;
+				border-radius: 10px;
+				margin: 30px;
+				padding: 20px;
+				text-align: center;
+				font-size: 30px;
+			}
+			body{
+				background-color: gray;
+			}
+		</style>
+    </head>
+	<body>
+ <div class=container> 
+	 <h3>Welcome</h3> 
+	 Choose Country: <select>
+	 <option value="select">select</option>
+    <option value="India">India</option>
+    <option value="America">America</option>
+	 <option value="Australia">Australia</option>
+	 </select>
+	 <br><br><br>
+ </div> 
+ </body>
+<script>
+		$("select").change(function(){
+			$("div").append(function(){
+				var w = $(".container select option:selected").val();
+				return w;
+			})
+		})
+</script>
+</html>

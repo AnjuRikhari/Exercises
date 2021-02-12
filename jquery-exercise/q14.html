@@ -1,0 +1,48 @@
+<html>
+    <head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<style>
+			div{
+				background-color: azure;
+				border-radius: 10px;
+				margin: 30px;
+				padding: 20px;
+				text-align: center;
+				font-size: 30px;
+			}
+			body{
+				background-color: gray;
+			}
+			table{
+				border-collapse: collapse;
+				margin-left: 40%;
+			}
+		    td{
+				padding: 10px;
+				font-size: 20px;
+			}
+		</style>
+    </head>
+	<body>
+		<div class="container">
+			<h5>Numbers greater than 10  </h5>
+			<table border="1">
+				<tr><td>0</td><td>2</td><td>-3</td></tr>
+				<tr><td>13</td><td>6</td><td>56</td></tr>
+				<tr><td>4</td><td>46</td><td>8</td></tr>
+				<tr><td>9</td><td>10</td><td>11</td></tr>
+				<tr><td>33</td><td>0</td><td>14</td></tr>
+			</table>
+		</div>
+	</body>
+	<script>
+		$(document).ready(function(){
+			$("td").each(function(){
+				var value = parseInt($(this).text());
+				if(value >10){
+				$(this).css("background-color","yellow");
+				}
+			})
+		})
+	</script>
+</html>

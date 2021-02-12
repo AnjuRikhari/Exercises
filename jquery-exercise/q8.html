@@ -1,0 +1,26 @@
+<html>
+    <head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<style>
+			.container{
+				text-align: center;
+				font-size: 30px;
+				margin-top: 50px;
+			}
+		</style>
+    </head>
+    <body>
+		<div class="container">
+			Click
+		</div> 
+    </body>
+	<script>
+        $(document).ready(function(){
+			$(".container").on('click',function(){
+			   $(".container").html("<a href = https://www.google.com/>Go to Google</a>");
+		   });
+		});   
+		
+		
+        </script>
+</html>

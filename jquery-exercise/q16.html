@@ -1,0 +1,55 @@
+<html>
+    <head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<style>
+			div{
+				background-color: azure;
+				border-radius: 10px;
+				margin: 10px;
+				padding: 10px;
+				font-size: 20px;
+			}
+			body{
+				background-color: gray;
+			}
+			.container{
+				margin: 50px;
+			}
+		</style>
+    </head>
+	<body>
+ 		<div class=container>
+			<div class="data">
+				<button class="btn">Get Info</button>
+			</div>
+ 		</div> 
+ 	</body>
+	<script>
+		$(document).ready(function(){
+		$(document).on('click','.del',function(e){
+			let id =$(this).attr('name')
+			$.ajax({
+				url: 'https://jsonplaceholder.typicode.com/todos/'+id,
+				type: 'DELETE',
+				success: function(result) {
+					
+					$('div#'+id).remove();
+				}
+			});
+		});
+		$(".btn").click(function(){
+			$.ajax({
+				url: 'https://jsonplaceholder.typicode.com/todos/',
+				success: function(result) {
+					for(var i in result)
+					{
+						$('.data').append(
+							'<div id='+result[i].id+'> <span id='+result[i].id+'>'+result[i].title+'</span> <button class="del" name='+result[i].id+'>X</button></div>'
+						);
+					}
+				}
+			});
+		});
+	});
+</script>
+</html>

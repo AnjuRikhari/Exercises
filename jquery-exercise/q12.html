@@ -1,0 +1,39 @@
+<html>
+    <head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<style>
+			div{
+				margin-bottom: 20px;
+			}
+			.container{
+				margin: 40px;
+				border-radius: 6px;
+				background-color:white;
+				padding: 30px;
+			}
+			body{
+				background-color: gray;
+			}
+		</style>
+    </head>
+<body>
+ <div class="container">
+    <h3>Click on Me to see the effect</h3>
+    <ul class="children">
+		<li><h4>Click me also nothing will happen</h4></li>
+		<li><h4>Click me also nothing will happen</h4></li>
+		<li><h4>Click me also nothing will happen</h4></li>
+    </ul>
+</div>
+ </body>
+<script>
+$(document).ready(function(){
+    $(".container").click(function(){
+        $(".container").css("background-color","aquamarine")
+    });
+   $(".container li").click(function(e) {
+        e.stopPropagation();
+   });
+});
+</script>
+</html>

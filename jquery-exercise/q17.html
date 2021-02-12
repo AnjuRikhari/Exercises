@@ -1,0 +1,61 @@
+<html>
+    <head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<style>
+			div{
+				background-color: azure;
+				border-radius: 10px;
+				margin: 30px;
+				padding: 20px;
+				text-align: center;
+				font-size: 30px;
+			}
+			body{
+				background-color: gray;
+			}
+			img{
+				height: 200px;
+				width: 400px;
+				position: relative;
+				left: 10px;
+			}
+			li{
+				list-style-type: none;
+			}
+		</style>
+    </head>
+	<body>
+ <div class="container"> 
+	 <ul class="slides">
+		 <li class="slide"><img id="book" src="book.jpeg" alt=""></li>
+	</ul>
+	 <button class="stop">Stop Slider</button>
+ </div> 
+ </body>
+<script>
+	var images=["book.jpeg","book2.jpeg","book4.jpeg","book3.jpeg","book2.jpeg"];
+	$(document).ready(function() {
+		var i=0;
+  	var t = setInterval(function(){
+			$.each(images,function(){
+				console.log(i);
+				$("img").attr("src",images[i])
+				$( "#book" ).animate({
+					
+  					}, function() {
+						// Animation complete.
+  						});
+				i++;
+			//$(".check").append('<img src='+images[i]+' alt = "piic">').show();
+				if(i==4)
+					{  i=0;}
+			})
+				 
+				}, 500)	
+		$(".stop").click(function(){
+                       clearInterval(t);
+                   });
+
+});
+</script>
+</html>

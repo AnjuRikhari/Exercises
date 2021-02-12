@@ -1,0 +1,26 @@
+<html>
+    <head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<style>
+			div{
+				margin-bottom: 20px;
+			}
+		</style>
+    </head>
+    <body>
+		<div class="container">
+			<div class="first">
+				<p id="test">Hello World. This is the jquery code.</p>
+				<p class="test-new">Hello World. This div has background colour.</p>
+			</div>
+			<div class="second-new">
+				<p>Hello World. This is the second div</p>
+			</div> 
+		</div> 
+    </body>
+	<script>
+           $(document).ready(function(){
+			  $("[class$=-new]").css("background-color","yellow");
+		   });
+        </script>
+</html>

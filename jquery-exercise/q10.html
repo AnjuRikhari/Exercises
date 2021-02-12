@@ -1,0 +1,49 @@
+<html>
+    <head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<style>
+			.dropdown{
+				display: none;
+			}
+			li{
+				list-style-type: none;
+			}
+			.container{
+				background-color: azure;
+				border-radius: 10px;
+				margin: 30px;
+				padding: 20px;
+				text-align: center;
+				font-size: 30px;
+			}
+			body{
+				background-color: gray;
+			}
+		</style>
+    </head>
+	<body>
+ 	<div class="container">
+		<h5>Hover on button to see programming languages.</h5>
+		<div class="hover-btn">
+			<button value="Hover on me!" id="hover">Hover On Me!
+			</button>
+		</div>
+		<div class="dropdown">
+			<ul class="list">
+				<li><a href="#">C</a></li>
+				<li><a href="#">C++</a></li>
+				<li><a href="#">Java</a></li>
+				<li><a href="#">Python</a></li>
+			</ul>
+		</div>
+	</div>
+ 	</body>
+<script>
+$(document).ready(function(){
+$(".hover-btn").hover(function(){
+$(".dropdown").slideToggle();
+});
+});
+</script>
+ 
+</html>
