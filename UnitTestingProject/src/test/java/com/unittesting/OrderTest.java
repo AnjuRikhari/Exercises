@@ -51,16 +51,8 @@ class OrderTest {
 
     @ParameterizedTest
     @ValueSource(doubles = {10.00, 2000.50, 30.00})
-    public void testGetPrice(double expected){
+    void testGetPrice(double expected){
         assertEquals(expected,order.getPrice());
-    }
-    void testGetPrice() {
-        //given
-        double expectedPrice=2000.50;
-        //when
-        double actualPrice=order.getPrice();
-        //then
-        assertTrue(expectedPrice==actualPrice);
     }
 
     @Test
