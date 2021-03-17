@@ -15,7 +15,8 @@ public class ManyToManyDaoService {
         AuthorManyToMany authorManyToMany = new AuthorManyToMany();
         authorManyToMany.setName("Clark");
 
-
+        AuthorManyToMany authorManyToMany2 = new AuthorManyToMany();
+        authorManyToMany.setName("John");
 
         BookManyToMany book = new BookManyToMany();
         book.setName("Java Programming");

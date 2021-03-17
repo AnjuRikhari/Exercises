@@ -15,12 +15,12 @@ public class BidirectionalDaoService {
     public void addAuthorBook(){
 
         BidirectionalAuthor author = new BidirectionalAuthor();
-        author.setAuthorName("Stark");
+        author.setAuthorName("Tom");
 
         Address authorAddress = new Address();
         authorAddress.setStreetNumber(22);
-        authorAddress.setLocation("Mumbai");
-        authorAddress.setState("Maharashtra");
+        authorAddress.setLocation("Jaipur");
+        authorAddress.setState("Rajasthan");
 
         author.setAddress(authorAddress);
 
@@ -28,9 +28,9 @@ public class BidirectionalDaoService {
         BidirectionalBook book2 = new BidirectionalBook();
         BidirectionalBook book3 = new BidirectionalBook();
 
-        book1.setBookName("Introduction to Spring Boot");
-        book2.setBookName("Introduction to JPA with Hibernate");
-        book3.setBookName("Introduction to Linux");
+        book1.setBookName("Advance Java");
+        book2.setBookName("C++");
+        book3.setBookName("Computer Networks");
 
 
         author.addBook(book1);

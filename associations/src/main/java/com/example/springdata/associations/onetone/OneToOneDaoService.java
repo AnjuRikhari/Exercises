@@ -12,17 +12,17 @@ public class OneToOneDaoService {
     public void addOneToOneAuthorBook(){
 
         AuthorOneToOne authorOneToOne = new AuthorOneToOne();
-        authorOneToOne.setAuthorName("Krishan");
+        authorOneToOne.setAuthorName("R.D.Sharma");
 
         Address authorAddress = new Address();
         authorAddress.setStreetNumber(20);
-        authorAddress.setLocation("Dehradun");
-        authorAddress.setState("Uttrakhand");
+        authorAddress.setLocation("Mumbai");
+        authorAddress.setState("Maharashtra");
 
         authorOneToOne.setAddress(authorAddress);
 
         BookOneToOne book = new BookOneToOne();
-        book.setBookName("Computer Networks");
+        book.setBookName("Trigonometry");
         book.setAuthor(authorOneToOne);
         authorOneToOne.setBook(book);
 

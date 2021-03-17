@@ -4,6 +4,8 @@ import com.example.springdata.associations.bidirectional.BidirectionalDaoService
 import com.example.springdata.associations.manytomany.ManyToManyDaoService;
 import com.example.springdata.associations.manytomany.ManyToManyRepository;
 import com.example.springdata.associations.onetone.OneToOneDaoService;
+import com.example.springdata.associations.unidirectional.UnidirectionalDaoService;
+import com.example.springdata.associations.withoutadditionaltable.AuthorWithoutAdditionalTableDaoService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -20,10 +22,16 @@ public class SpringdataassociationsApplication {
 		//bidirectionalDaoService.addAuthorBook();
 
 		OneToOneDaoService oneToOneDaoService = context.getBean(OneToOneDaoService.class);
-		//oneToOneDaoService.addOneToOneAuthorBook();
+		oneToOneDaoService.addOneToOneAuthorBook();
 
 		ManyToManyDaoService manyToManyDaoService = context.getBean(ManyToManyDaoService.class);
-		manyToManyDaoService.addManyToManyAuthorBook();
+		//manyToManyDaoService.addManyToManyAuthorBook();
+
+		UnidirectionalDaoService unidirectionalDaoService = context.getBean(UnidirectionalDaoService.class);
+		//unidirectionalDaoService.addAuthorBookUnidirectionally();
+
+		AuthorWithoutAdditionalTableDaoService daoService = context.getBean(AuthorWithoutAdditionalTableDaoService.class);
+		//daoService.addAuthorAndBook();
 	}
 
 }

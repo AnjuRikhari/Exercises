@@ -1,6 +1,5 @@
-package com.example.springdata.associations.onetone;
+package com.example.springdata.associations.unidirectional;
 
-import com.example.springdata.associations.Address;
 import com.example.springdata.associations.bidirectional.BidirectionalBook;
 
 import javax.persistence.*;
@@ -8,24 +7,23 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-public class AuthorOneToOne {
+public class UnidirectionalAuthor {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int authorId;
     private String authorName;
 
-    @Embedded
-    Address address;
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "author_id")
+    private Set<UnidirectionalBook> books;
 
-    @OneToOne(mappedBy = "author", cascade = CascadeType.ALL)
-    BookOneToOne book;
-
-    public BookOneToOne getBook() {
-        return book;
+    public Set<UnidirectionalBook> getBooks() {
+        return books;
     }
 
-    public void setBook(BookOneToOne book) {
-        this.book = book;
+    public void setBooks(Set<UnidirectionalBook> books) {
+        this.books = books;
     }
 
     public int getAuthorId() {
@@ -44,11 +42,12 @@ public class AuthorOneToOne {
         this.authorName = authorName;
     }
 
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
+    public void addBook(UnidirectionalBook book){
+        if (book != null){
+            if (books == null){
+                books = new HashSet<UnidirectionalBook>();
+            }
+            books.add(book);
+        }
     }
 }
